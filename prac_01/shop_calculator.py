@@ -7,14 +7,19 @@ if the total price is over $100, then a 10% discount is applied to that total
 ItemList: list[float] = []
 price_output: float = 0
 total = 0
+
 item_num = int(input("Number of items:"))
+while item_num < 0:
+    print("Invalid number of items!")
+    item_num = int(input("Number of items:"))
+
 for i in range(item_num):
     price = float(input("Price of items:"))
     ItemList.append(price)
 total = sum(ItemList)
 
 if total < 0:
-    print("wrong price input")
+    print("Invalid price of items!")
 elif total > 100:
     price_output = total * 0.9
 else:
