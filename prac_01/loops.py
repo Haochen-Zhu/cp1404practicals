@@ -25,5 +25,3 @@
 #     for j in range(i):
 #         print("*", end='')
 #     print()
-
-3 e.
