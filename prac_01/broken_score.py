@@ -17,4 +17,3 @@ elif score > 50:
     print("Passable")
 elif score < 50:
     print("Bad")
-0
