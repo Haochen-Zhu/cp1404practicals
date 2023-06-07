@@ -8,8 +8,9 @@ while sales >= 0:
     if sales < 1000:
         bonus = sales * 0.1
         print(f"Bonus: ${bonus}")
-    else:
+    if sales >= 1000:
         bonus = sales * 0.15
         print(f"Bonus: ${bonus}")
-else:
-    print(f"wrong sales numbers")
+    sales = float(input("Enter sales: $"))
+print(f"wrong sales numbers")
+
