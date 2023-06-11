@@ -16,9 +16,9 @@ def main():
     print_stars(password_len)
 
 
-def print_stars(password_len):
-    for i in range(password_len):
-        print("*", end='')
+def get_password():
+    password = str(input(f"Type your password (not less than {password_len_min} characters): "))
+    return password
 
 
 def get_password_length(password):
@@ -26,9 +26,9 @@ def get_password_length(password):
     return password_len
 
 
-def get_password():
-    password = str(input(f"Type your password (not less than {password_len_min} characters): "))
-    return password
+def print_stars(password_len):
+    for i in range(password_len):
+        print("*", end='')
 
 
 main()
