@@ -13,3 +13,8 @@ number1 = int(in_file.readline())
 number2 = int(in_file.readline())
 in_file.close()
 print(number1 + number2)
+
+in_file = open("numbers.txt", "r")
+for line in in_file:
+    print(line)
+in_file.close()
