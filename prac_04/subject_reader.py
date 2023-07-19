@@ -14,7 +14,7 @@ FILENAME = "subject_data.txt"
 def main():
     data = get_data()
     print(data)
-    format_data()
+    display_data(data)
 
 
 def get_data():
@@ -32,17 +32,25 @@ def get_data():
         print("----------")
 
         data.append(parts)
+
+    input_file.close()
     return data
-    input_file.close()
 
 
-def format_data():
-    input_file = open(FILENAME)
-    for line in input_file:
-        line = line.strip()  # Remove the \n
-        parts = line.split(',')  # Separate the data into its parts
-        print(f"{parts[0]} is taught by {parts[1]} and has {parts[2]} students")
-    input_file.close()
+# def display_data():
+#     input_file = open(FILENAME)
+#     for line in input_file:
+#         line = line.strip()  # Remove the \n
+#         parts = line.split(',')  # Separate the data into its parts
+#         print(f"{parts[0]} is taught by {parts[1]} and has {parts[2]} students")
+#     input_file.close()
+
+
+def display_data(a):
+    for i in range(len(a)):
+        print(f"{a[i][0]} is taught by {a[i][1]} and has {a[i][2]} students")
+
+
 
 
 main()
