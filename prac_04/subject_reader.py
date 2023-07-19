@@ -51,6 +51,4 @@ def display_data(a):
         print(f"{a[i][0]} is taught by {a[i][1]} and has {a[i][2]} students")
 
 
-
-
 main()
