@@ -14,7 +14,7 @@ FILENAME = "subject_data.txt"
 def main():
     data = get_data()
     print(data)
-    # display_data(data)
+    display_data(data)
 
 
 def get_data():
