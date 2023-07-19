@@ -14,13 +14,14 @@ FILENAME = "subject_data.txt"
 def main():
     data = get_data()
     print(data)
+    format_data()
 
 
 def get_data():
     """Read data from file formatted like: subject,lecturer,number of students."""
     input_file = open(FILENAME)
     for line in input_file:
-        print(line)  # See what a line looks like
+        print(line, sep="")  # See what a line looks like
         print(repr(line))  # See what a line really looks like
         line = line.strip()  # Remove the \n
         parts = line.split(',')  # Separate the data into its parts
@@ -30,5 +31,13 @@ def get_data():
         print("----------")
     input_file.close()
 
+
+def format_data():
+    input_file = open(FILENAME)
+    for line in input_file:
+        line = line.strip()  # Remove the \n
+        parts = line.split(',')  # Separate the data into its parts
+        print(parts)
+        print(f"{parts[1]} is taught by {parts[2]} and has {parts[3]} students")
 
 main()
