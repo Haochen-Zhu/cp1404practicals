@@ -1,3 +1,7 @@
+"""
+CP1404 program -- quick_pick
+"""
+
 import random
 
 NUMBERS_PER_LINE = 6
