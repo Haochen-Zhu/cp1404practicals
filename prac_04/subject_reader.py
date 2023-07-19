@@ -37,7 +37,8 @@ def format_data():
     for line in input_file:
         line = line.strip()  # Remove the \n
         parts = line.split(',')  # Separate the data into its parts
-        print(parts)
-        print(f"{parts[1]} is taught by {parts[2]} and has {parts[3]} students")
+        print(f"{parts[0]} is taught by {parts[1]} and has {parts[2]} students")
+    input_file.close()
+
 
 main()
